@@ -1,6 +1,8 @@
 # FrameWork-Soldadoras
 Framework para soldadoras con STM32
+
 juandiazainscough@gmail.com - Técnico en Electrónica - Estudiante Cs. Físicas (UBA)
+
 Se utilizó STM32CubeIDE v1.81
 
 Problema:
