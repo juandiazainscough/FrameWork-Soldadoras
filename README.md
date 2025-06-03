@@ -24,11 +24,17 @@ Dado que esta no es una solución real y depende de stock de más placas, se des
 Ingeniería Inversa:
 La placa de PWM ( conectada mediante peine a la principal) se conecta por medio de un conector de 10 pines a la placa del STM.
 Trabajando con placas sanas , realizando ingeniería inversa, midiendo con osciloscopio y tester el comportamiento de cada pin ante la activación de diferentes funciones del menú mostrado en el display (HotStart, ArcForce, AntiStick, VRD, TIG, Diametro de electrodo y Corriente) se descubrieron las siguientes funcionalidades:
-Pin 1: NC (No connected)	Pin 6: NC
-Pin 2: GND	               Pin 7:GND
-Pin 3: Control Térmico           Pin 8: Orden de generación en vacío
-Pin 4: No descubierto	Pin 9: Detección arco de soldadura
-Pin 5: Control PWM			Pin 10: Alimentación (5V)
+
+-Pin 1: NC (No connected) -	Pin 6: NC
+
+- Pin 2: GND	            - Pin 7:GND
+  
+- Pin 3: Control Térmico  - Pin 8: Orden de generación en vacío
+  
+- Pin 4: No descubierto	  - Pin 9: Detección arco de soldadura
+  
+- Pin 5: Control PWM		  -	Pin 10: Alimentación (5V)
+  
 Pin 3: cuando está en 5V, la temperatura del equipo es adecuada. Si está en 0V, hay sobretemperatura (OVERHEAT)
 Pin 4: No se logró descubrir su uso, ante múltiples pruebas y funciones siempre se mantuvo en 0V. De todas formas, no fue relevante.
 Pin 5: La placa encargada de generar el PWM cuenta con un SG3525 que, según la tensión que recibe en uno de sus pines, genera un PWM con cierto ciclo de trabajo. Esta tensión que necesita es enviada directamente por este pin.
