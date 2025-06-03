@@ -36,11 +36,16 @@ Trabajando con placas sanas , realizando ingeniería inversa, midiendo con oscil
 - Pin 9: Detección arco de soldadura
 -	Pin 10: Alimentación (5V)
 
-Pin 3: cuando está en 5V, la temperatura del equipo es adecuada. Si está en 0V, hay sobretemperatura (OVERHEAT)
+Pin 3: cuando está en 5V, la temperatura del equipo es adecuada. Si está en 0V, hay sobretemperatura (OVERHEAT).
+
 Pin 4: No se logró descubrir su uso, ante múltiples pruebas y funciones siempre se mantuvo en 0V. De todas formas, no fue relevante.
+
 Pin 5: La placa encargada de generar el PWM cuenta con un SG3525 que, según la tensión que recibe en uno de sus pines, genera un PWM con cierto ciclo de trabajo. Esta tensión que necesita es enviada directamente por este pin.
+
 Pin 8: En vacío, la soldadora genera una tensión entre bornes de salida de 60V, pero, ante las funciones VRD y TIG, debe generar una tensión menor a 25V. Si este pin está en 5V, la tensión de salida generada por el equipo será 60V; en cambio, si el pin está en 0V, será de 24V.
+
 Pin 9: Este pin varía su tensión entre 0V y 5V según la tensión censada del arco de soldadura. Por ejemplo, cuando el arco está en 60V (sin soldar), este pin se pone en 5V; pero cuando está en 0V (electrodo pegado), este pin se pone en 0V.
+
 Con la función de cada pin descubierta, es posible continuar con el desarrollo embebido.
 Desarrollo Embebido
 Para el desarrollo de una nueva placa que pudiera reemplazar a la original se utilizó:
